@@ -1,0 +1,7 @@
+<h1>Edit task</h1>
+<%= form_for(@task) do |form| %>
+  <%= form.text_field :title, placeholder: "Please enter a title", value: @task.title%>
+  <%= form.text_area :details, placeholder: "Please enter a some details", value: @task.details%>
+  <%= form.check_box :completed %>
+  <%= form.submit 'Update Task' %>
+<% end %>
