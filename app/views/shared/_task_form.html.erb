@@ -1,0 +1,11 @@
+<%= form_for(object_name) do |form| %>
+  <%= label_tag(:title, "Task Title:") %>
+  <%= form.text_field :title, placeholder: "Please enter a title", value: object_name.title%>
+  <%= label_tag(:details, "Task Details:") %>
+  <%= form.text_area :details, placeholder: "Please enter a some details", value: object_name.details%>
+  <%# Only allow the checkbox to be set for existing tasks %>
+  <%= label_tag(:completed, "Complete?:") %>
+  <%= form.check_box :completed, disabled: object_name.id.nil? %>
+  <%= form.submit 'Save' %>
+<% end %>
+

@@ -1,7 +1,9 @@
 <h1>New Task</h1>
+<%= render "shared/task_form", object_name: @task %>
+<!--
 <%= form_for(Task.new) do |form| %>
   <%= form.text_field :title, placeholder: "Please enter a title" %>
   <%= form.text_area :details, placeholder: "Please enter a some details" %>
   <%= form.submit 'create task' %>
 <% end %>
-
+-->
